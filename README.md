@@ -45,6 +45,10 @@ Python, pandas, Matplotlib, scikit-learn, XGBoost, alpaca-py, and python-dotenv.
 - `model_scores.csv` — MAE scores
 - `next_session_forecasts.csv` — forecasts with the data cutoff date
 
+## Prediction comparison
+
+![Actual prices compared with model predictions](model_comparison.png)
+
 ## What I learned
 
 A model can look accurate on a chart without beating a simple prediction method. Comparing it against a baseline helped me understand the results better.
@@ -52,6 +56,17 @@ A model can look accurate on a chart without beating a simple prediction method.
 The current dataset ends on November 13, 2026. These results are from one stock and one test period, so they don't show how the models would perform in every market condition.
 
 ## How to run
+
+I used Python 3.12 for this project. These commands are for Windows PowerShell. You will also need an Alpaca account with an API key and secret key.
+
+First, clone the repository and open its folder in VS Code:
+
+```powershell
+git clone https://github.com/Adharsh818/nvidia-stock-price-predictor.git
+cd nvidia-stock-price-predictor
+```
+
+Run the following commands in the terminal inside that folder:
 
 1. Create a virtual environment:
    ```powershell
@@ -68,13 +83,17 @@ The current dataset ends on November 13, 2026. These results are from one stock 
    python -m pip install -r requirements.txt
    ```
 
-4. Create a `.env` file and add your own Alpaca credentials:
+4. Create a `.env` file beside `stock_predictor.py` and add your own Alpaca credentials:
    ```dotenv
    ALPACA_API_KEY=your_api_key
    ALPACA_SECRET_KEY=your_secret_key
    ```
 
+   Replace the placeholders with your own keys. Keep `.env` private; it is excluded by `.gitignore`.
+
 5. Run the script:
    ```powershell
    python stock_predictor.py
    ```
+
+The script prints the model errors and next-session forecasts, saves the three output files listed above, and opens the comparison chart. The forecast uses the fixed November 13, 2026 data cutoff; it is not a live forecast.
