@@ -1,0 +1,5 @@
+Model,Data cutoff,Latest close,Predicted close,Change (%),Forecast horizon
+Baseline,2026-11-13,162.84,162.84,0.0,Next trading session
+Random Forest,2026-11-13,162.84,166.98216740896333,2.5437038866146677,Next trading session
+XGBoost,2026-11-13,162.84,167.24087524414062,2.70257629829318,Next trading session
+Linear Regression,2026-11-13,162.84,161.16669987911826,-1.027573152101291,Next trading session
