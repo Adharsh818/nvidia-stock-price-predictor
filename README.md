@@ -50,3 +50,31 @@ Python, pandas, Matplotlib, scikit-learn, XGBoost, alpaca-py, and python-dotenv.
 A model can look accurate on a chart without beating a simple prediction method. Comparing it against a baseline helped me understand the results better.
 
 The current dataset ends on November 13, 2026. These results are from one stock and one test period, so they don't show how the models would perform in every market condition.
+
+## How to run
+
+1. Create a virtual environment:
+   ```powershell
+   python -m venv .venv
+   ```
+
+2. Activate it:
+   ```powershell
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+3. Install the dependencies:
+   ```powershell
+   python -m pip install -r requirements.txt
+   ```
+
+4. Create a `.env` file and add your own Alpaca credentials:
+   ```dotenv
+   ALPACA_API_KEY=your_api_key
+   ALPACA_SECRET_KEY=your_secret_key
+   ```
+
+5. Run the script:
+   ```powershell
+   python stock_predictor.py
+   ```
