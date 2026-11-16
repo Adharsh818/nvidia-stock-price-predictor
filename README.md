@@ -45,6 +45,10 @@ Python, pandas, Matplotlib, scikit-learn, XGBoost, alpaca-py, and python-dotenv.
 - `model_scores.csv` — MAE scores
 - `next_session_forecasts.csv` — forecasts with the data cutoff date
 
+## Prediction comparison
+
+![Actual prices compared with model predictions](model_comparison.png)
+
 ## What I learned
 
 A model can look accurate on a chart without beating a simple prediction method. Comparing it against a baseline helped me understand the results better.
